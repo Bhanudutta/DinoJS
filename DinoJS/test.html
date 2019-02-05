@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to create an array, then display its length.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+<script type="text/javascript" src="GenHTML.js">  </script>
+<script type="text/javascript" src="CSSGenerator.js">  </script>
+<script type="text/javascript" src="DinoObject.js">  </script>
+<script>
+
+let css = new CSSGenerator('test');
+css.addProperty("color","red");
+function myFunction() {
+
+  var fruits = [{data:"Banana",_style:css.generate_inl()},{data:"Orange",$d:{data:'papaya'}},{data:"Apple"}, {data:"Mango"}];
+
+  h = new HTML("test")
+  h.SetObject(fruits)
+  d = new Dino('abc')
+  d.SetDOM(document.getElementById("demo"))
+  d.Update(h);
+}
+</script>
+
+</body>
+</html>
